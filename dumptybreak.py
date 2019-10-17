@@ -24,7 +24,7 @@ if not os.path.exists(".\\frames\\" + usrinputvideoname):
 
 #Use this line for frames scaled to a maximum width of 200px. Scaled frames 
 #can be easier to use in some cases, such as with machine learning.
-#framebreak=".\\ffmpeg\\ffmpeg.exe -i " + usrinputvideo + " -vf scale='min(200,iw)':-2 .\\frames\\" + usrinputvideoname + "\\" + usrinputvideoname + "-%07d.png"
+#.\ffmpeg\ffmpeg.exe -i <<INPUTVIDEOPATH>> -vf scale='min(200,iw)':-2 .\frames\<<INPUTVIDEONAME>>\<<INPUTVIDEONAME>>-%07d.png
 
 #Use this line for full-size frames
 framebreak=".\\ffmpeg\\ffmpeg.exe -i " + usrinputvideo + " .\\frames\\" + usrinputvideoname + "\\" + usrinputvideoname + "-%07d.png"
