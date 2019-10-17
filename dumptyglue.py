@@ -32,7 +32,7 @@ print(framerate)
 
 ###Make a temp video with no audio
 
-#.\ffmpeg\ffmpeg.exe -r <<INPUTVIDEOFPS>> -f image2 -pix_fmt yuv420p -i .\frames\<<INPUTVIDEONAME>>\<<INPUTVIDEONAME>>-%07d.png -vcodec libx264 -crf 17 -pix_fmt yuv420p -y <<INPUTVIDEONAME>>-temp.mp4"
+#.\ffmpeg\ffmpeg.exe -r <<INPUTVIDEOFPS>> -f image2 -pix_fmt yuv420p -i .\frames\<<INPUTVIDEONAME>>\<<INPUTVIDEONAME>>-%07d.png -vcodec libx264 -crf 17 -pix_fmt yuv420p -y <<INPUTVIDEONAME>>-temp.mp4
 ffmuted = ".\\ffmpeg\\ffmpeg.exe -r " + framerate + " -f image2 -pix_fmt yuv420p -i .\\frames\\" + usrinputframespath + "\\" + usrinputframespath + "-%07d.png -vcodec libx264 -crf 17 -pix_fmt yuv420p -y " + usrinputvideoname + "-temp.mp4"
 result = subprocess.check_output(ffmuted, shell=True)
 
