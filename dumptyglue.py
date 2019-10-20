@@ -37,7 +37,7 @@ ffmuted = ".\\ffmpeg\\ffmpeg.exe -r " + framerate + " -f image2 -pix_fmt yuv420p
 result = subprocess.check_output(ffmuted, shell=True)
 
 
-###Glue together the audio and the frames at the original frame rate
+###Glue together the audio and the temp video
 
 #.\ffmpeg\ffmpeg.exe -I <<INPUTVIDEONAME>>-temp.mp4 -i <<INPUTVIDEOPATH>> -map 0:v:0? -map 1? -map -1:v? -c copy -pix_fmt yuv420p <<INPUTVIDEONAME>>-glued.mp4 -y
 ffglue = ".\\ffmpeg\\ffmpeg.exe -i " + usrinputvideoname + "-temp.mp4 -i " + usrinputvideo + " -map 0:v:0? -map 1? -map -1:v? -c copy -pix_fmt yuv420p " + usrinputvideoname + "-glued.mp4 -y"
